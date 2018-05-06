@@ -172,7 +172,6 @@
   </select>
 
 
-
   <select id="selectCheckedCartByUserId" parameterType="int" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List" />
@@ -180,20 +179,6 @@
     where user_id = #{userId}
     and checked = 1
   </select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </mapper>

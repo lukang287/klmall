@@ -12,9 +12,9 @@
 
     <appender name="klmall" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<File>d:/klmalllog/klmall.log</File>-->
-        <File>/developer/apache-tomcat-7.0.73/logs/klmall.log</File>
+        <File>F:/maven/log/klmall.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/developer/apache-tomcat-7.0.73/logs/klmall.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>F:/maven/log/klmall.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <maxHistory>10</maxHistory>
         </rollingPolicy>

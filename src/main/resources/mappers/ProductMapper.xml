@@ -181,7 +181,7 @@
   <select id="selectList" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List" />
-    from mmall_product
+    from klmall_product
     ORDER BY id asc
   </select>
 
@@ -189,7 +189,7 @@
   <select id="selectByNameAndProductId" parameterType="map" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List" />
-    from mmall_product
+    from klmall_product
     <where>
       <if test="productName != null">
         and name like #{productName}
@@ -203,13 +203,13 @@
   <select id="selectByNameAndCategoryIds" parameterType="map" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List" />
-    from mmall_product
+    from klmall_product
     where status = 1
     <if test="productName != null">
       and name like #{productName}
     </if>
     <if test="categoryIdList != null">
-      and category_id in
+      and  category_id in
       <foreach close=")" collection="categoryIdList" index="index" item="item" open="(" separator=",">
         #{item}
       </foreach>

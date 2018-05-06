@@ -31,7 +31,7 @@
     delete from klmall_shipping
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.klmall.pojo.Shipping">
+  <insert id="insert" parameterType="com.klmall.pojo.Shipping" useGeneratedKeys="true" keyProperty="id">
     insert into klmall_shipping (id, user_id, receiver_name, 
       receiver_phone, receiver_mobile, receiver_province, 
       receiver_city, receiver_district, receiver_address, 
@@ -216,24 +216,5 @@
     from klmall_shipping
     where user_id = #{userId}
   </select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </mapper>

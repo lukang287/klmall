@@ -74,7 +74,7 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
-    public ServerResponse selectCategoryAndChildrenById(Integer parentId){
+    public ServerResponse<List<Integer>> selectCategoryAndChildrenById(Integer parentId){
         //guava方法初始化
         Set<Category> categorySet = Sets.newHashSet();
         findChildCategory(categorySet, parentId);
